@@ -103,14 +103,7 @@ export default function LetrasDiferentesTool() {
       setCopied(name);
       setTimeout(() => setCopied(null), 2000);
     } catch {
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-      setCopied(name);
-      setTimeout(() => setCopied(null), 2000);
+      setCopied(null);
     }
   };
 
